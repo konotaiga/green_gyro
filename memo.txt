@@ -1,0 +1,28 @@
+﻿記録の形式は
+タイムスタンプ,メッセージタイプ,ロール角[deg],ピッチ角[deg],ヨー角[deg],X軸角速度[deg/s],Y軸角速度[deg/s],Z軸角速度[deg/s],X軸加速度[m/s^2],Y軸加速度[m/s^2],Z軸加速度[m/s^2]
+
+
+＜パッケージのインストール＞
+・通常のpython
+コマンドライン（コマンドプロンプト）上で
+pip install -r requirements.txt
+を実行する
+
+・visual studio 上
+下記サイトを参考に
+https://docs.microsoft.com/ja-jp/visualstudio/python/tutorial-working-with-python-in-visual-studio-step-05-installing-packages?view=vs-2017
+の
+「4. 検索フィールドに matplotlib」のmatplotlibをpyserialに変更してインストール
+
+＜USBシリアルのドライバ＞
+・「bsusrc06 ドライバ」で検索してドライバをダウンロード
+・上記ファイルを展開する
+・「デバイスマネージャ」上に？マークかなにかでデバイスが表示されてる
+・該当デバイスを右クリックして「プロパティ」を選択
+・上記タブで「ドライバー」を選択→ドライバーの更新
+・「コンピューターを参照してドライバーソフトウェアを検索」を選択で、ダウンロードしたドライバのフォルダを
+　選択（XP 32bit_2000）
+
+＜COMポート番号確認＞
+・「デバイスマネージャ」上で「ポート（COMとLPT）」を開く
+・USB Serial Port(COMx)のCOMxをconfig.iniへ記入する
